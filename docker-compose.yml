@@ -1,6 +1,6 @@
 version: "3"
 services:
-  movie-container:
+  openapiapp-container:
     image: openapiapp-portal
     ports:
       - "8081:8081"
@@ -15,7 +15,7 @@ services:
       - openapi-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=movieportal
+      - MYSQL_DATABASE=openapiapp
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 45s
